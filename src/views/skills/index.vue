@@ -41,8 +41,11 @@
                             {{ skill.slug }}
                         </td>
 
-                        <td class="px-6 py-4">
-
+                        <td class="px-6 py-4 space-x-2">
+                            <RouterLink :to="{name: 'edit', params:{id: skill.id}}" class="px-4 py-2 bg-green-500 hover:bg-indigo-700 text-white rounded"> Edit</RouterLink>
+                            <button type="submit" class="px-4 py-2 bg-red-500 hover:bg-indigo-700 text-white rounded">
+                                Delete
+                            </button>
                         </td>
                        
                     </tr>

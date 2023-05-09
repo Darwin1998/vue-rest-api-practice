@@ -16,7 +16,7 @@ export default function useSkills() {
   };
 
   const getSkill = async (id) => {
-    const response = await axios.get(`skills/${id}`);
+    const response = await axios.get("skills/" + id);
     skill.value = response.data.data;
   };
 
@@ -36,7 +36,7 @@ export default function useSkills() {
 
   const updateSkill = async (id) => {
     try {
-      await axios.put(`skills/${id}`, skill.value);
+      await axios.put("skills/" + id, skill.value);
       await router.push({ name: "index" });
     } catch (error) {
       if (error.response.status === 422) {
